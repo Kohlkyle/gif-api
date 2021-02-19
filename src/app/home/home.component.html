@@ -1,0 +1,7 @@
+<app-header></app-header>
+<app-search-gifs (searchEvent)="onSubmit($event)"></app-search-gifs>
+<app-gif-card
+  *ngFor="let gif of gifData?.data"
+  [gifRef]="gif"
+  (favoriteEvent)="onFavorite($event)"
+></app-gif-card>
